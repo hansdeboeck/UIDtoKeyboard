@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("UIDtoKeyboard")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("UIDtoKeyboard")>
-<Assembly: AssemblyCopyright("Copyright ©  2019")>
+<Assembly: AssemblyTitle("MeloFare")>
+<Assembly: AssemblyDescription("deboeck.dev - nfc reader")>
+<Assembly: AssemblyCompany("DE BOECK, Hans")>
+<Assembly: AssemblyProduct("MeloFare")>
+<Assembly: AssemblyCopyright("Copyright ©  2024")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

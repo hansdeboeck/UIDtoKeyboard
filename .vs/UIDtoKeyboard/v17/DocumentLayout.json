@@ -1,7 +1,26 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\it.kiemkracht.org\\github\\e\\UIDtoKeyboard\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8C731CEE-C112-4BC2-B9C7-11F57C35183D}|UIDtoKeyboard\\UIDtoKeyboard.vbproj|c:\\it.kiemkracht.org\\github\\e\\uidtokeyboard\\uidtokeyboard\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{8C731CEE-C112-4BC2-B9C7-11F57C35183D}|UIDtoKeyboard\\UIDtoKeyboard.vbproj|solutionrelative:uidtokeyboard\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C731CEE-C112-4BC2-B9C7-11F57C35183D}|UIDtoKeyboard\\UIDtoKeyboard.vbproj|c:\\it.kiemkracht.org\\github\\e\\uidtokeyboard\\uidtokeyboard\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{8C731CEE-C112-4BC2-B9C7-11F57C35183D}|UIDtoKeyboard\\UIDtoKeyboard.vbproj|solutionrelative:uidtokeyboard\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|UIDtoKeyboard||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C731CEE-C112-4BC2-B9C7-11F57C35183D}|UIDtoKeyboard\\UIDtoKeyboard.vbproj|c:\\it.kiemkracht.org\\github\\e\\uidtokeyboard\\uidtokeyboard\\my project\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{8C731CEE-C112-4BC2-B9C7-11F57C35183D}|UIDtoKeyboard\\UIDtoKeyboard.vbproj|solutionrelative:uidtokeyboard\\my project\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C731CEE-C112-4BC2-B9C7-11F57C35183D}|UIDtoKeyboard\\UIDtoKeyboard.vbproj|c:\\it.kiemkracht.org\\github\\e\\uidtokeyboard\\uidtokeyboard\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|984ae51a-4b21-44e7-822c-dd5e046893ef"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +28,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmMain.vb [Design]",
+              "DocumentMoniker": "C:\\it.kiemkracht.org\\github\\e\\UIDtoKeyboard\\UIDtoKeyboard\\frmMain.vb",
+              "RelativeDocumentMoniker": "UIDtoKeyboard\\frmMain.vb",
+              "ToolTip": "C:\\it.kiemkracht.org\\github\\e\\UIDtoKeyboard\\UIDtoKeyboard\\frmMain.vb [Design]",
+              "RelativeToolTip": "UIDtoKeyboard\\frmMain.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-20T15:28:23.176Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmMain.vb",
+              "DocumentMoniker": "C:\\it.kiemkracht.org\\github\\e\\UIDtoKeyboard\\UIDtoKeyboard\\frmMain.vb",
+              "RelativeDocumentMoniker": "UIDtoKeyboard\\frmMain.vb",
+              "ToolTip": "C:\\it.kiemkracht.org\\github\\e\\UIDtoKeyboard\\UIDtoKeyboard\\frmMain.vb",
+              "RelativeToolTip": "UIDtoKeyboard\\frmMain.vb",
+              "ViewState": "AQIAAM0AAAAAAAAAAAAIwNUAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-20T14:52:35.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "app.manifest",
+              "DocumentMoniker": "C:\\it.kiemkracht.org\\github\\e\\UIDtoKeyboard\\UIDtoKeyboard\\My Project\\app.manifest",
+              "RelativeDocumentMoniker": "UIDtoKeyboard\\My Project\\app.manifest",
+              "ToolTip": "C:\\it.kiemkracht.org\\github\\e\\UIDtoKeyboard\\UIDtoKeyboard\\My Project\\app.manifest",
+              "RelativeToolTip": "UIDtoKeyboard\\My Project\\app.manifest",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
+              "WhenOpened": "2024-03-20T15:25:38.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UIDtoKeyboard",
+              "DocumentMoniker": "C:\\it.kiemkracht.org\\github\\e\\UIDtoKeyboard\\UIDtoKeyboard\\UIDtoKeyboard.vbproj",
+              "RelativeDocumentMoniker": "UIDtoKeyboard\\UIDtoKeyboard.vbproj",
+              "ToolTip": "C:\\it.kiemkracht.org\\github\\e\\UIDtoKeyboard\\UIDtoKeyboard\\UIDtoKeyboard.vbproj",
+              "RelativeToolTip": "UIDtoKeyboard\\UIDtoKeyboard.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-20T15:21:31.738Z",
+              "EditorCaption": ""
             }
           ]
         }

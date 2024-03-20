@@ -22,15 +22,16 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.cbxReaderList = New System.Windows.Forms.ComboBox()
         Me.btnRefreshReader = New System.Windows.Forms.Button()
         Me.btnStartMonitor = New System.Windows.Forms.Button()
         Me.txtInputSpace = New System.Windows.Forms.TextBox()
         Me.btnStopMonitor = New System.Windows.Forms.Button()
-        Me.lblInst1 = New System.Windows.Forms.Label()
-        Me.lblInst2 = New System.Windows.Forms.Label()
         Me.txtReadingMode = New System.Windows.Forms.TextBox()
         Me.lblReadingMode = New System.Windows.Forms.Label()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.SuspendLayout()
         '
         'cbxReaderList
@@ -55,17 +56,18 @@ Partial Class frmMain
         'btnStartMonitor
         '
         Me.btnStartMonitor.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnStartMonitor.Location = New System.Drawing.Point(22, 91)
+        Me.btnStartMonitor.Location = New System.Drawing.Point(12, 495)
         Me.btnStartMonitor.Name = "btnStartMonitor"
-        Me.btnStartMonitor.Size = New System.Drawing.Size(496, 32)
+        Me.btnStartMonitor.Size = New System.Drawing.Size(99, 44)
         Me.btnStartMonitor.TabIndex = 3
         Me.btnStartMonitor.Text = "Start Monitor"
         Me.btnStartMonitor.UseVisualStyleBackColor = True
+        Me.btnStartMonitor.Visible = False
         '
         'txtInputSpace
         '
         Me.txtInputSpace.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtInputSpace.Location = New System.Drawing.Point(22, 141)
+        Me.txtInputSpace.Location = New System.Drawing.Point(22, 88)
         Me.txtInputSpace.Multiline = True
         Me.txtInputSpace.Name = "txtInputSpace"
         Me.txtInputSpace.Size = New System.Drawing.Size(496, 384)
@@ -81,33 +83,12 @@ Partial Class frmMain
         Me.btnStopMonitor.Text = "Stop"
         Me.btnStopMonitor.UseVisualStyleBackColor = True
         '
-        'lblInst1
-        '
-        Me.lblInst1.AutoSize = True
-        Me.lblInst1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.lblInst1.Location = New System.Drawing.Point(551, 30)
-        Me.lblInst1.Name = "lblInst1"
-        Me.lblInst1.Size = New System.Drawing.Size(104, 18)
-        Me.lblInst1.TabIndex = 6
-        Me.lblInst1.Text = "Reading Mode"
-        '
-        'lblInst2
-        '
-        Me.lblInst2.AutoSize = True
-        Me.lblInst2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.lblInst2.Location = New System.Drawing.Point(567, 59)
-        Me.lblInst2.Name = "lblInst2"
-        Me.lblInst2.Size = New System.Drawing.Size(218, 108)
-        Me.lblInst2.TabIndex = 7
-        Me.lblInst2.Text = "1- Card UID (4 Byte)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2- Card UID (4 Byte + Reverse)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "3- Card UID (7 Byte)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "4- Ca" &
-    "rd UID (7 Byte + Reverse) " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "5- Card UID (8H10D)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "6- Card UID (8H10D + Reverse)"
-        '
         'txtReadingMode
         '
         Me.txtReadingMode.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtReadingMode.Location = New System.Drawing.Point(136, 56)
+        Me.txtReadingMode.Location = New System.Drawing.Point(74, 56)
         Me.txtReadingMode.Name = "txtReadingMode"
-        Me.txtReadingMode.Size = New System.Drawing.Size(289, 24)
+        Me.txtReadingMode.Size = New System.Drawing.Size(351, 24)
         Me.txtReadingMode.TabIndex = 8
         '
         'lblReadingMode
@@ -116,26 +97,33 @@ Partial Class frmMain
         Me.lblReadingMode.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.lblReadingMode.Location = New System.Drawing.Point(22, 59)
         Me.lblReadingMode.Name = "lblReadingMode"
-        Me.lblReadingMode.Size = New System.Drawing.Size(108, 18)
+        Me.lblReadingMode.Size = New System.Drawing.Size(46, 18)
         Me.lblReadingMode.TabIndex = 9
-        Me.lblReadingMode.Text = "Reading Mode:"
+        Me.lblReadingMode.Text = "Mode"
+        '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "MeloFare"
+        Me.NotifyIcon1.Visible = True
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(810, 551)
+        Me.ClientSize = New System.Drawing.Size(544, 551)
         Me.Controls.Add(Me.lblReadingMode)
         Me.Controls.Add(Me.txtReadingMode)
-        Me.Controls.Add(Me.lblInst2)
-        Me.Controls.Add(Me.lblInst1)
         Me.Controls.Add(Me.btnStopMonitor)
         Me.Controls.Add(Me.txtInputSpace)
         Me.Controls.Add(Me.btnStartMonitor)
         Me.Controls.Add(Me.btnRefreshReader)
         Me.Controls.Add(Me.cbxReaderList)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
-        Me.Text = "UIDtoKeyboard"
+        Me.ShowInTaskbar = False
+        Me.Text = "MeloFare"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -146,8 +134,7 @@ Partial Class frmMain
     Friend WithEvents btnStartMonitor As Button
     Friend WithEvents txtInputSpace As TextBox
     Friend WithEvents btnStopMonitor As Button
-    Friend WithEvents lblInst1 As Label
-    Friend WithEvents lblInst2 As Label
     Friend WithEvents txtReadingMode As TextBox
     Friend WithEvents lblReadingMode As Label
+    Friend WithEvents NotifyIcon1 As NotifyIcon
 End Class

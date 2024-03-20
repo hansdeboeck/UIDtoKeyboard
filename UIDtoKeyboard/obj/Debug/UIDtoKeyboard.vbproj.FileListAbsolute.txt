@@ -1,0 +1,17 @@
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\bin\Debug\PCSC.dll
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\bin\Debug\PCSC.Iso7816.dll
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\bin\Debug\PCSC.xml
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\bin\Debug\PCSC.Iso7816.xml
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\UIDtoKeyboard.vbproj.AssemblyReference.cache
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\UIDtoKeyboard.vbproj.GenerateResource.cache
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\UIDtoKeyboard.vbproj.CoreCompileInputs.cache
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\UIDtoKey.ECA6EE06.Up2Date
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\bin\Debug\MeloFare.exe.config
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\bin\Debug\MeloFare.exe
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\bin\Debug\MeloFare.pdb
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\bin\Debug\MeloFare.xml
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\MeloFare.frmMain.resources
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\MeloFare.Resources.resources
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\MeloFare.exe
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\MeloFare.xml
+C:\it.kiemkracht.org\github\e\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\MeloFare.pdb

@@ -60,6 +60,12 @@ Public Class frmMain
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadReaderList()
+        txtReadingMode.Text = 4
+        startMonitor()
+        Me.Hide()
+        Me.Visible = False
+
+
     End Sub
 
     Private Sub btnRefreshReader_Click(sender As Object, e As EventArgs) Handles btnRefreshReader.Click
@@ -210,4 +216,10 @@ Public Class frmMain
         Return True
     End Function
 
+    Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.Click
+
+        Me.ShowInTaskbar = True
+        Me.Focus()
+        Me.Show()
+    End Sub
 End Class
