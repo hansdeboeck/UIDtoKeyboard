@@ -62,7 +62,6 @@ Partial Class frmMain
         Me.btnStartMonitor.TabIndex = 3
         Me.btnStartMonitor.Text = "Start Monitor"
         Me.btnStartMonitor.UseVisualStyleBackColor = True
-        Me.btnStartMonitor.Visible = False
         '
         'txtInputSpace
         '
