@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("deboeck.dev - nfc reader")>
 <Assembly: AssemblyCompany("DE BOECK, Hans")>
 <Assembly: AssemblyProduct("MeloFare")>
-<Assembly: AssemblyCopyright("Copyright ©  2024")>
+<Assembly: AssemblyCopyright("Copyright ©  2025")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.0.0.1")>
 <Assembly: AssemblyFileVersion("1.0.0.0")>

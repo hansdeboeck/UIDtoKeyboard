@@ -32,3 +32,8 @@ C:\Users\HansDeBoeck.AzureAD\Documents\GitHub\UIDtoKeyboard\UIDtoKeyboard\obj\De
 C:\Users\HansDeBoeck.AzureAD\Documents\GitHub\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\MeloFare.exe
 C:\Users\HansDeBoeck.AzureAD\Documents\GitHub\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\MeloFare.xml
 C:\Users\HansDeBoeck.AzureAD\Documents\GitHub\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\MeloFare.pdb
+C:\Users\HansDeBoeck.AzureAD\Documents\GitHub\UIDtoKeyboard\UIDtoKeyboard\bin\Debug\MeloFare.exe.manifest
+C:\Users\HansDeBoeck.AzureAD\Documents\GitHub\UIDtoKeyboard\UIDtoKeyboard\bin\Debug\MeloFare.application
+C:\Users\HansDeBoeck.AzureAD\Documents\GitHub\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\MeloFare.TrustInfo.xml
+C:\Users\HansDeBoeck.AzureAD\Documents\GitHub\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\MeloFare.exe.manifest
+C:\Users\HansDeBoeck.AzureAD\Documents\GitHub\UIDtoKeyboard\UIDtoKeyboard\obj\Debug\MeloFare.application

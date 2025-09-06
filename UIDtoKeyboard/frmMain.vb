@@ -6,9 +6,12 @@ Public Class frmMain
 
     Private Shared ReadOnly _contextFactory As IContextFactory = ContextFactory.Instance
     Private _hContext As ISCardContext
+    Private shouldExit As Boolean = False
+
     Dim readerName As String
     Dim readingMode As String
     Dim isstart As Boolean = False
+
 
     Function loadReaderList()
         Dim readerList As String()
@@ -58,9 +61,72 @@ Public Class frmMain
         End If
     End Sub
 
+    ' Als het formulier via het kruisje wordt afgesloten, verberg het opnieuw in de taakbalk
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If e.CloseReason = CloseReason.UserClosing AndAlso Not shouldExit Then
+            e.Cancel = True
+            Me.ShowInTaskbar = False
+            Me.Hide()
+        End If
+    End Sub
+
+    Public Function checkForUpdates()
+        'Doe een call naar https://assets.deboeck.dev/vba/meloflare/versie.txt
+        Dim client As New Net.WebClient()
+        Dim latestVersion As String = client.DownloadString("https://assets.deboeck.dev/vba/meloflare/versie.txt").Trim()
+        Dim currentVersion As String = Application.ProductVersion
+        If latestVersion <> currentVersion Then
+            Dim result As DialogResult = MessageBox.Show("A new version is available. Do you want to download it?", "Update available", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+            If result = DialogResult.Yes Then
+                'Open de downloadpagina
+                Process.Start("https://www.deboeck.dev/melo")
+            Else
+                stopApp()
+            End If
+        Else
+
+
+        End If
+    End Function
+
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        checkForUpdates()
         loadReaderList()
-        txtReadingMode.Text = 4
+        versionlabel.Text = "v " & Application.ProductVersion
+
+        If My.Computer.FileSystem.FileExists("C:\deboeck\config.txt") Then
+            Dim lines() As String = IO.File.ReadAllLines("C:\deboeck\config.txt")
+            If lines.Length >= 2 Then
+                Dim reader As String = lines(0).Trim()
+                Dim mode As String = lines(1).Trim()
+                If cbxReaderList.Items.Contains(reader) Then
+                    cbxReaderList.SelectedItem = reader
+                End If
+                If mode = "1" OrElse mode = "2" OrElse mode = "3" OrElse mode = "4" OrElse mode = "5" OrElse mode = "6" Then
+                    txtReadingMode.Text = mode
+                End If
+            End If
+        Else
+            If Not My.Computer.FileSystem.DirectoryExists("C:\deboeck") Then
+                My.Computer.FileSystem.CreateDirectory("C:\deboeck")
+            End If
+            Dim defaultLines() As String = {"GHI NC001 0", "4"}
+            IO.File.WriteAllLines("C:\deboeck\config.txt", defaultLines)
+        End If
+
+        'als textreading mode leeg is val terug op 4
+        If txtReadingMode.Text = "" Then
+            txtReadingMode.Text = "4"
+        End If
+
+        NotifyIcon1.BalloonTipTitle = "Melo is running"
+        NotifyIcon1.BalloonTipText = "Melo is running in the background. Double click the icon to open the application."
+        NotifyIcon1.ShowBalloonTip(3000)
+
+
+
+
         startMonitor()
         Me.Hide()
         Me.Visible = False
@@ -84,10 +150,12 @@ Public Class frmMain
         End If
     End Sub
 
+    Public Function stopApp()
+        shouldExit = True
+        Me.Close()
+    End Function
     Private Sub btnStopMonitor_Click(sender As Object, e As EventArgs) Handles btnStopMonitor.Click
-        If isstart = True Then
-            monitor.Cancel()
-        End If
+        stopApp()
     End Sub
 
     Function SendUID4Byte()
@@ -174,6 +242,10 @@ Public Class frmMain
         Return True
     End Function
 
+
+
+
+
     Function SendUID7Byte()
         Try
             Using context = _contextFactory.Establish(SCardScope.System)
@@ -203,7 +275,6 @@ Public Class frmMain
 
                             Dim uid2 As String = BitConverter.ToString(revuid)
                             uid2 = uid2.Replace("-", "")
-
                             SendKeys.SendWait(uid2 + "{ENTER}")
                         End If
                     End Using
@@ -222,4 +293,22 @@ Public Class frmMain
         Me.Focus()
         Me.Show()
     End Sub
+
+
+
+    Private Sub txtReadingMode_TextChanged(sender As Object, e As EventArgs) Handles txtReadingMode.TextChanged
+        'sla de waarde op in het tekstbestand
+        If Not My.Computer.FileSystem.DirectoryExists("C:\deboeck") Then
+            My.Computer.FileSystem.CreateDirectory("C:\deboeck")
+        End If
+        Dim lines() As String = {cbxReaderList.Text, txtReadingMode.Text}
+        IO.File.WriteAllLines("C:\deboeck\config.txt", lines)
+        'als de monitor loopt, herstarten
+        If isstart = True Then
+            monitor.Cancel()
+            startMonitor()
+        End If
+    End Sub
+
+
 End Class
